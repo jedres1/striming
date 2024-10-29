@@ -51,6 +51,7 @@ public class Main {
                 case 5:
                     continuar=false;
                     System.out.println("gracias por utilizar el servicio de estrimin");
+                    return;
                 default:
                     System.out.println("opcion no valida");
                     break;
@@ -85,7 +86,7 @@ public class Main {
         String password = scanner.next();
 
         System.out.println("Seleccione un plan BASICO, ESTANDAR, PREMIUM");
-        Plan plan = Plan.valueOf(scanner.nextLine().toUpperCase());
+        Plan plan = Plan.valueOf(scanner.next().toUpperCase());
 
         //crear una nueva cuenta
         CuentaUsuario nuevaCuenta = new CuentaUsuario(nombreUsuario,password,plan);
